@@ -18,4 +18,5 @@ body {
   min-block-size: 100vh;
   transition: all var(--transition-long) ease-in;
   position: relative;
+  font-family: var(--font-family);
 }

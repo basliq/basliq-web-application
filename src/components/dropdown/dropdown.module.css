@@ -2,6 +2,7 @@
 
 .root {
   position: relative;
+  inline-size: max-content;
   z-index: 999;
 
   --target-block-size: 0;
@@ -64,7 +65,6 @@
 .popover {
   --offset: var(--size-5);
 
-  inline-size: 24rem;
   text-align: center;
 
   & .container {
@@ -78,7 +78,7 @@
 
   & .container::before {
     content: '';
-    inline-size: 1.2rem;
+    inline-size: 0.6rem;
     aspect-ratio: 1;
     background-color: var(--color-popover-bg);
     position: absolute;
