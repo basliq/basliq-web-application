@@ -1,5 +1,3 @@
-'use client'
-
 import * as idb from 'idb'
 import {IDB_DB_BASLIQ_APPLICATION, IDB_DOS_COMMON, IDB_KEY_SETTINGS} from "./constants.ts";
 import {AppSettings} from "../global-state/app-settings.ts";

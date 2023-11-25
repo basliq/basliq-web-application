@@ -78,7 +78,7 @@
 
   & .container::before {
     content: '';
-    inline-size: 1.2rem;
+    inline-size: 0.6rem;
     aspect-ratio: 1;
     background-color: var(--color-popover-bg);
     position: absolute;

@@ -1,5 +1,3 @@
-'use client'
-
 import s from './dropdown.module.css'
 import {useState, useEffect, useRef} from 'react'
 import {RelativePosition} from "../../types/relative-position.ts";

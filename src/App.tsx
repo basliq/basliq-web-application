@@ -4,7 +4,7 @@ function App() {
 
   return (
     <div>
-      <Button text='hi' startIcon='login' type='danger' size='large' popoverText='hello' />
+      <Button text='hi' startIcon='login' type='tertiary' size='small' popoverText='hello' status='pending' />
     </div>
   )
 }

@@ -1,5 +1,3 @@
-'use client'
-
 import s from './button.module.css'
 import {RelativePositionCenter} from "../../types/relative-position.ts";
 import React from "react";
@@ -17,7 +15,6 @@ export type ButtonTypes =
   | 'secondary'
   | 'tertiary'
   | 'danger'
-  | 'special'
 
 export type ButtonStates = 'idle' | 'pending' | 'disabled'
 export type ButtonAnimations = 'none' | 'move-inline-end' | 'rotate-clock-wise'
