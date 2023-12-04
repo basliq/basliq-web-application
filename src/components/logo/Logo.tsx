@@ -7,8 +7,7 @@ type LogoProps = {
 }
 
 export const Logo = ({withText = true, animated = false}: LogoProps) => {
-  // TODO
-  // ? how to not type an svg import?
+  // TODO - how to not type an svg import?
 
   return (
     <figure className={`${s.container} ${animated ? s.animated : undefined}`}>

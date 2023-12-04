@@ -1,0 +1,13 @@
+.list {
+    border: var(--divider-medium-dim); /*test*/
+    box-shadow: var(--shadow-distant);
+
+    inline-size: 30rem; /*test*/
+    min-block-size: 60rem; /*test*/
+    border-radius: var(--radius-medium);
+    background-color: var(--color-bg);
+
+    & .listHeader {
+        padding: var(--size-3) var(--size-5);
+    }
+}
