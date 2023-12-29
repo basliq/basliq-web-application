@@ -1,4 +1,5 @@
 export const RoutePaths = {
   home: '/',
-  board: '/board'
+  board: '/boards',
+  auth: '/auth'
 }

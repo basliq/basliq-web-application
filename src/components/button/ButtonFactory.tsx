@@ -112,7 +112,7 @@ export const ButtonFactory = ({
       menuType='popover'
       target={button}
     >
-      <p className='p-smaller'>{popoverText}</p>
+      <p>{popoverText}</p>
     </Dropdown>
   )
 }

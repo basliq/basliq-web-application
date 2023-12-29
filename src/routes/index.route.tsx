@@ -10,5 +10,8 @@ export const router = createBrowserRouter([
   {
     path: RoutePaths.board,
     element: <BoardPage />,
+  },
+  {
+    path: RoutePaths.auth
   }
 ])
