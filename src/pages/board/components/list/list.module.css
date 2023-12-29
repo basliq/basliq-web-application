@@ -1,0 +1,21 @@
+.list {
+    border: var(--divider-medium-dim); /*test*/
+    box-shadow: var(--shadow-distant);
+
+    inline-size: 30rem; /*test*/
+    border-radius: var(--radius-small);
+    background-color: var(--color-bg);
+
+    & .listHeader {
+        padding: var(--size-3) var(--size-5) var(--size-1);
+
+        & .title {
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-4);
+        }
+    }
+
+    & .listContent {
+        padding: var(--size-3);
+    }
+}

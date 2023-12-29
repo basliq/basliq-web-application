@@ -13,6 +13,8 @@
   --border-stroke-thick: 3px;
 
   /* divider */
+  --divider-medium-dim: var(--color-border-divider-dim) solid
+  var(--border-stroke-medium);
   --divider-medium: var(--color-border-divider) solid
     var(--border-stroke-medium);
 }

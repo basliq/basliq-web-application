@@ -11,8 +11,7 @@ export const loadAppSettings = async () => {
     appSettings,
   )
 
-  // TODO
-  // load some values from user browser preferences e.g. reducedMotion and theme
+  // TODO - load some values from user browser preferences e.g. reducedMotion and theme
 
   // populating the global state with data gathered from IDB
   // if the property is undefined, we assign the default values of the state

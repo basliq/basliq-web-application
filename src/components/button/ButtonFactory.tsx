@@ -6,8 +6,7 @@ import {Spinner} from "../spinner/Spinner.tsx";
 import {useAppSettings} from "../../storages/global-state/app-settings.ts";
 
 
-// TODO
-// animations
+// TODO - animations
 
 export type ButtonSizes = 'small' | 'medium' | 'large'
 export type ButtonTypes =
@@ -113,7 +112,7 @@ export const ButtonFactory = ({
       menuType='popover'
       target={button}
     >
-      <p className='p-smaller'>{popoverText}</p>
+      <p>{popoverText}</p>
     </Dropdown>
   )
 }

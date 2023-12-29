@@ -2,17 +2,16 @@ import s from './dropdown.module.css'
 import {useState, useEffect, useRef} from 'react'
 import {RelativePosition} from "../../types/relative-position.ts";
 
-// TODO:
-// add animations
-// add support for automatic position change if there is no space
+// TODO - add animations
+// TODO - add support for automatic position change if there is no space
 // * nested menu:
-// add nested dropdowns
-// handle not closing the dropdown if clicked in a nested menu
+// TODO - add nested dropdowns
+// TODO - handle not closing the dropdown if clicked in a nested menu
 // * keyboard:
-// handle closing menu with Esc key
-// add keyboard support
+// TODO - handle closing menu with Esc key
+// TODO - add keyboard support
 // * timing
-// add delay and close after an interval option
+// TODO - add delay and close after an interval option
 
 type DropdownParentType =
   | null

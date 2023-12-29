@@ -1,13 +1,12 @@
 import * as idb from 'idb'
-import {IDB_DB_BASLIQ_APPLICATION, IDB_DOS_COMMON, IDB_KEY_SETTINGS} from "./constants.ts";
 import {AppSettings} from "../global-state/app-settings.ts";
-
+import {IDBPaths} from "./idb-paths.ts";
 
 export const CommonIDB = {
   openDB: async () => {
-    return await idb.openDB(IDB_DB_BASLIQ_APPLICATION, 1, {
+    return await idb.openDB(IDBPaths.basliqApp.dbName, 1, {
       upgrade(db) {
-        db.createObjectStore(IDB_DOS_COMMON)
+        db.createObjectStore(IDBPaths.basliqApp.common.dsName)
       },
     })
   },
@@ -15,16 +14,16 @@ export const CommonIDB = {
   loadAppSettings: async (): Promise<Partial<AppSettings>> => {
     const db = await CommonIDB.openDB()
     const settings = (await db.get(
-      IDB_DOS_COMMON,
-      IDB_KEY_SETTINGS,
+      IDBPaths.basliqApp.common.dsName,
+      IDBPaths.basliqApp.common.configs,
     )) as AppSettings
     if (settings) return settings
-    await db.delete(IDB_DOS_COMMON, IDB_KEY_SETTINGS)
+    await db.delete(IDBPaths.basliqApp.common.dsName, IDBPaths.basliqApp.common.configs)
     return {}
   },
 
   storeAppSettings: async (applicationSettings: AppSettings) => {
     const db = await CommonIDB.openDB()
-    await db.put(IDB_DOS_COMMON, applicationSettings, IDB_KEY_SETTINGS)
+    await db.put(IDBPaths.basliqApp.common.dsName, applicationSettings, IDBPaths.basliqApp.common.configs)
   },
 }
