@@ -60,7 +60,7 @@
     transparent
   );
 
-  /* popover*/
+  /* popover */
   --opacity-popover: 90%;
   --color-popover-bg: color-mix(
     in hsl,

@@ -1,5 +1,5 @@
 .board {
-    padding: var(--size-8); /*test*/
+    padding: var(--size-8); /* test */
     block-size: 100%;
     background-image: linear-gradient(to top right, var(--theme-primary-900), var(--theme-primary-700));
 }

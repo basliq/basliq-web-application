@@ -1,8 +1,7 @@
 .list {
-    border: var(--divider-medium-dim); /*test*/
+    border: var(--divider-medium-dim); /* test */
     box-shadow: var(--shadow-distant);
-
-    inline-size: 30rem; /*test*/
+    inline-size: 30rem; /* test */
     border-radius: var(--radius-small);
     background-color: var(--color-bg);
 

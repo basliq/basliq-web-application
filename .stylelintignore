@@ -1,0 +1,8 @@
+# directories
+.husky
+coverage
+node_modules
+dist
+
+src/components/spinner/spinner.module.css
+

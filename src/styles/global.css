@@ -1,21 +1,15 @@
-@import 'animations/duration.css';
-
-@import 'app/root.css';
-@import 'app/anchor.css';
-@import 'app/scrollbar.css';
-@import 'app/selection.css';
-@import 'app/list.css';
-
-@import 'colors/tailwind.css';
-@import 'colors/default.css';
-
-@import 'elevations/shadow.css';
-
-@import 'fonts/text.css';
-@import 'fonts/typography.css';
-
-@import 'measurements/size.css';
-@import 'measurements/shape.css';
-@import 'measurements/utils.css';
-
-@import 'themes/basliq-light.css';
+@import url('animations/duration.css');
+@import url('app/root.css');
+@import url('app/anchor.css');
+@import url('app/scrollbar.css');
+@import url('app/selection.css');
+@import url('app/list.css');
+@import url('colors/tailwind.css');
+@import url('colors/default.css');
+@import url('elevations/shadow.css');
+@import url('fonts/text.css');
+@import url('fonts/typography.css');
+@import url('measurements/size.css');
+@import url('measurements/shape.css');
+@import url('measurements/utils.css');
+@import url('themes/basliq-light.css');

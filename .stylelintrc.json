@@ -1,0 +1,15 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "color-no-hex": true,
+    "declaration-no-important": true,
+    "declaration-property-unit-allowed-list": {
+      "font-size": ["rem"],
+      "inline-size": ["rem", "dvh", "%"],
+      "block-size": ["rem", "dvh", "%"]
+    },
+    "property-disallowed-list": ["width", "height"],
+    "property-no-vendor-prefix": null,
+    "selector-class-pattern": null
+  }
+}

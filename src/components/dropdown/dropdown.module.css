@@ -1,4 +1,4 @@
-@import '../../styles/utilities/relative-position.css';
+@import url('../../styles/utilities/relative-position.css');
 
 .root {
   position: relative;
