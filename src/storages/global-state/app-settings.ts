@@ -1,7 +1,7 @@
 import {create} from 'zustand'
-import {AppLanguages} from "../../types/language.ts";
-import {AppRegions} from "../../types/region.ts";
-import {AppThemes} from "../../types/theme.ts";
+import {AppLanguages} from "@/types/language.ts";
+import {AppRegions} from "@/types/region.ts";
+import {AppThemes} from "@/types/theme.ts";
 import {CommonIDB} from "../idb/common.idb.ts";
 
 

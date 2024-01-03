@@ -1,4 +1,4 @@
-import {AppSettings, useAppSettings} from "../../storages/global-state/app-settings.ts";
+import {AppSettings, useAppSettings} from "@/storages/global-state/app-settings.ts";
 import {loadAppSettingsFromIDB} from "./load-app-settings-from-idb.ts";
 
 

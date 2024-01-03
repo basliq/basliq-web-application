@@ -1,6 +1,6 @@
 import s from './dropdown.module.css'
 import {useState, useEffect, useRef} from 'react'
-import {RelativePosition} from "../../types/relative-position.ts";
+import {RelativePosition} from "@/types/relative-position.ts";
 
 // TODO - add animations
 // TODO - add support for automatic position change if there is no space
