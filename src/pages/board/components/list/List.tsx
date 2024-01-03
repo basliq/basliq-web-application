@@ -1,5 +1,5 @@
 import s from './list.module.css'
-import {Task} from "../task/Task.tsx";
+import { Task } from '../task/Task.tsx'
 
 export const List = () => {
   return (

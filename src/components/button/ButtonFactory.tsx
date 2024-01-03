@@ -1,28 +1,18 @@
 import s from './button.module.css'
-import {RelativePositionCenter} from "@/types/relative-position.ts";
-import React from "react";
-import {Dropdown} from "../dropdown/Dropdown.tsx";
-import {Spinner} from "../spinner/Spinner.tsx";
-import {useAppSettings} from "@/storages/global-state/app-settings.ts";
-
+import { RelativePositionCenter } from '@/types/relative-position.ts'
+import React from 'react'
+import { Dropdown } from '../dropdown/Dropdown.tsx'
+import { Spinner } from '../spinner/Spinner.tsx'
+import { useAppSettings } from '@/storages/global-state/app-settings.ts'
 
 // TODO - animations
 
 export type ButtonSizes = 'small' | 'medium' | 'large'
-export type ButtonTypes =
-  | 'primary'
-  | 'secondary'
-  | 'tertiary'
-  | 'danger'
+export type ButtonTypes = 'primary' | 'secondary' | 'tertiary' | 'danger'
 
 export type ButtonStates = 'idle' | 'pending' | 'disabled'
 export type ButtonAnimations = 'none' | 'move-inline-end' | 'rotate-clock-wise'
-export type ButtonJustifyValues =
-  | 'start'
-  | 'center'
-  | 'end'
-  | 'space-between'
-  | 'space-end'
+export type ButtonJustifyValues = 'start' | 'center' | 'end' | 'space-between' | 'space-end'
 
 type Props = {
   size?: ButtonSizes
@@ -55,7 +45,7 @@ export const ButtonFactory = ({
   popoverText,
   popoverPosition = 'blockEndCenter',
 }: Props) => {
-  const utteranceEnabled = useAppSettings(state => state.utteranceEnabled)
+  const utteranceEnabled = useAppSettings((state) => state.utteranceEnabled)
 
   const utter = () => {
     if (!utteranceEnabled) return
@@ -106,12 +96,7 @@ export const ButtonFactory = ({
 
   // rendering a popover element when hovering on button
   return (
-    <Dropdown
-      openOn='hover'
-      position={popoverPosition}
-      menuType='popover'
-      target={button}
-    >
+    <Dropdown openOn="hover" position={popoverPosition} menuType="popover" target={button}>
       <p>{popoverText}</p>
     </Dropdown>
   )

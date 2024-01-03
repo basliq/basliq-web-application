@@ -1,6 +1,6 @@
 import * as idb from 'idb'
-import {AppSettings} from "../global-state/app-settings.ts";
-import {IDBPaths} from "./idb-paths.ts";
+import { AppSettings } from '../global-state/app-settings.ts'
+import { IDBPaths } from './idb-paths.ts'
 
 export const CommonIDB = {
   openDB: async () => {
@@ -13,10 +13,7 @@ export const CommonIDB = {
 
   loadAppSettings: async (): Promise<Partial<AppSettings>> => {
     const db = await CommonIDB.openDB()
-    const settings = (await db.get(
-      IDBPaths.basliqApp.common.dsName,
-      IDBPaths.basliqApp.common.configs,
-    )) as AppSettings
+    const settings = (await db.get(IDBPaths.basliqApp.common.dsName, IDBPaths.basliqApp.common.configs)) as AppSettings
     if (settings) return settings
     await db.delete(IDBPaths.basliqApp.common.dsName, IDBPaths.basliqApp.common.configs)
     return {}

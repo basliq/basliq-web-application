@@ -1,13 +1,10 @@
-import {AppSettings} from "@/storages/global-state/app-settings.ts";
-import {CommonIDB} from "@/storages/idb/common.idb.ts";
-import {AppLanguages} from "@/types/language.ts";
-import {AppRegions} from "@/types/region.ts";
-import {AppThemes} from "@/types/theme.ts";
+import { AppSettings } from '@/storages/global-state/app-settings.ts'
+import { CommonIDB } from '@/storages/idb/common.idb.ts'
+import { AppLanguages } from '@/types/language.ts'
+import { AppRegions } from '@/types/region.ts'
+import { AppThemes } from '@/types/theme.ts'
 
-export const loadAppSettingsFromIDB = async (
-  initialAppSettings: Partial<AppSettings>,
-  appSettings: AppSettings,
-) => {
+export const loadAppSettingsFromIDB = async (initialAppSettings: Partial<AppSettings>, appSettings: AppSettings) => {
   const appSettingsIDB = await CommonIDB.loadAppSettings()
 
   if (appSettingsIDB.language && AppLanguages.includes(appSettings.language)) {

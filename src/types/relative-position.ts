@@ -1,8 +1,4 @@
-export type RelativePositionCenter =
-  | 'inlineStartCenter'
-  | 'inlineEndCenter'
-  | 'blockStartCenter'
-  | 'blockEndCenter'
+export type RelativePositionCenter = 'inlineStartCenter' | 'inlineEndCenter' | 'blockStartCenter' | 'blockEndCenter'
 
 export type RelativePosition =
   | RelativePositionCenter

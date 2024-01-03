@@ -7,7 +7,7 @@ type SpinnerProps = {
   size: 'small' | 'medium' | 'large'
 }
 
-export const Spinner = ({size = 'small'}: SpinnerProps) => {
+export const Spinner = ({ size = 'small' }: SpinnerProps) => {
   return (
     <div className={`${s.ldsRoller} ${s[size]}`}>
       <div></div>

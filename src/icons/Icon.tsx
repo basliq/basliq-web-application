@@ -1,5 +1,5 @@
 import s from './icon.module.css'
-import {IconMap} from './icon-map.tsx'
+import { IconMap } from './icon-map.tsx'
 
 // This project uses icons from Material Design.
 //
@@ -18,17 +18,13 @@ type props = {
   color?: 'text'
 }
 
-export default function Icon({type, size = 'medium', color = 'text'}: props) {
+export default function Icon({ type, size = 'medium', color = 'text' }: props) {
   function getIconSVGPath(icon: Icons): React.ReactNode {
     return IconMap[icon]
   }
 
   return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 24 24'
-      className={`${s[size]} ${s[color]}`}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={`${s[size]} ${s[color]}`}>
       {getIconSVGPath(type)}
     </svg>
   )

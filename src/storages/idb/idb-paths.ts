@@ -3,7 +3,7 @@ export const IDBPaths = {
     dbName: 'basliq-web-application',
     common: {
       dsName: 'common',
-      configs: 'configs'
-    }
-  }
+      configs: 'configs',
+    },
+  },
 }

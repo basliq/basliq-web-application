@@ -1,6 +1,6 @@
-import s from './dropdown.module.css'
-import {useState, useEffect, useRef} from 'react'
-import {RelativePosition} from "@/types/relative-position.ts";
+import s from "./dropdown.module.css";
+import { useEffect, useRef, useState } from "react";
+import { RelativePosition } from "@/types/relative-position.ts";
 
 // TODO - add animations
 // TODO - add support for automatic position change if there is no space
@@ -13,9 +13,7 @@ import {RelativePosition} from "@/types/relative-position.ts";
 // * timing
 // TODO - add delay and close after an interval option
 
-type DropdownParentType =
-  | null
-  | ((value: boolean | ((prevState: boolean) => void)) => void)
+type DropdownParentType = null | ((value: boolean | ((prevState: boolean) => void)) => void)
 
 type DropdownProps = {
   target: React.ReactNode
@@ -36,13 +34,11 @@ export const Dropdown = ({
   openOn = 'click',
   dropdownParentStateFunction = null,
 }: DropdownProps) => {
-  // states and refs
   const [open, setOpen] = useState(initialState === 'open')
   const targetContainerRef = useRef<HTMLDivElement>(null)
   const rootRef = useRef<HTMLDivElement>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
-  // effects
   useEffect(() => {
     const handleClickOutside = ($e: MouseEvent) => {
       if (
@@ -66,14 +62,8 @@ export const Dropdown = ({
     if (targetContainerRef.current !== null) {
       const targetHeight = targetContainerRef.current.offsetHeight
       const targetWidth = targetContainerRef.current.offsetWidth
-      rootRef.current?.style.setProperty(
-        '--target-block-size',
-        targetHeight.toString() + 'px',
-      )
-      rootRef.current?.style.setProperty(
-        '--target-inline-size',
-        targetWidth.toString() + 'px',
-      )
+      rootRef.current?.style.setProperty('--target-block-size', targetHeight.toString() + 'px')
+      rootRef.current?.style.setProperty('--target-inline-size', targetWidth.toString() + 'px')
     }
   }, [])
 
@@ -82,7 +72,6 @@ export const Dropdown = ({
     return position
   }
 
-  // handlers
   const handleClose = () => {
     setOpen(false)
     if (dropdownParentStateFunction === null) return
@@ -110,11 +99,9 @@ export const Dropdown = ({
 
   return (
     <div className={s.root} ref={rootRef} onMouseLeave={handleMouseLeave}>
-      <div
-        onClick={handleClick}
-        onMouseEnter={handleMouseEnter}
-        ref={targetContainerRef}
-      >
+      {/* TODO - add keyboard event listener */}
+      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
+      <div onClick={handleClick} onMouseEnter={handleMouseEnter} ref={targetContainerRef}>
         {target}
       </div>
       <div

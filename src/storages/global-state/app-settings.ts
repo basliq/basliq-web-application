@@ -1,9 +1,8 @@
-import {create} from 'zustand'
-import {AppLanguages} from "@/types/language.ts";
-import {AppRegions} from "@/types/region.ts";
-import {AppThemes} from "@/types/theme.ts";
-import {CommonIDB} from "../idb/common.idb.ts";
-
+import { create } from 'zustand'
+import { AppLanguages } from '@/types/language.ts'
+import { AppRegions } from '@/types/region.ts'
+import { AppThemes } from '@/types/theme.ts'
+import { CommonIDB } from '../idb/common.idb.ts'
 
 export type AppSettings = {
   language: AppLanguages
@@ -21,24 +20,20 @@ type AppSettingsActions = {
   toggleUtteranceEnabled: () => void
 }
 
-export const useAppSettings = create<AppSettings & AppSettingsActions>()(
-  set => ({
-    language: 'en',
-    setLanguage: (language: AppLanguages) => set({language}),
-    region: 'US',
-    setRegion: (region: AppRegions) => set({region}),
-    theme: 'basliq-light',
-    setTheme: (theme: AppThemes) => set({theme}),
-    reducedMotion: false,
-    toggleReducedMotion: () =>
-      set(state => ({reducedMotion: !state.reducedMotion})),
-    utteranceEnabled: false,
-    toggleUtteranceEnabled: () =>
-      set(state => ({utteranceEnabled: !state.utteranceEnabled})),
-  }),
-)
+export const useAppSettings = create<AppSettings & AppSettingsActions>()((set) => ({
+  language: 'en',
+  setLanguage: (language: AppLanguages) => set({ language }),
+  region: 'US',
+  setRegion: (region: AppRegions) => set({ region }),
+  theme: 'basliq-light',
+  setTheme: (theme: AppThemes) => set({ theme }),
+  reducedMotion: false,
+  toggleReducedMotion: () => set((state) => ({ reducedMotion: !state.reducedMotion })),
+  utteranceEnabled: false,
+  toggleUtteranceEnabled: () => set((state) => ({ utteranceEnabled: !state.utteranceEnabled })),
+}))
 
-useAppSettings.subscribe(state => {
+useAppSettings.subscribe((state) => {
   const saveToIDB = async () => {
     const nonFunctionState = {
       language: state.language,

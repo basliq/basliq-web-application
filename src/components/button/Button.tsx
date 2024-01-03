@@ -1,6 +1,6 @@
-import {ButtonFactory, ButtonJustifyValues, ButtonSizes, ButtonStates, ButtonTypes} from "./ButtonFactory.tsx";
-import Icon, {Icons} from "../../icons/Icon.tsx";
-import {RelativePositionCenter} from "@/types/relative-position.ts";
+import { ButtonFactory, ButtonJustifyValues, ButtonSizes, ButtonStates, ButtonTypes } from './ButtonFactory.tsx'
+import Icon, { Icons } from '../../icons/Icon.tsx'
+import { RelativePositionCenter } from '@/types/relative-position.ts'
 
 type Props = {
   size?: ButtonSizes
@@ -17,12 +17,8 @@ type Props = {
 }
 
 export const Button = (props: Props) => {
-  const startItem = props.startIcon ? (
-    <Icon type={props.startIcon} size={props.size} />
-  ) : null
-  const endItem = props.endIcon ? (
-    <Icon type={props.endIcon} size={props.size} />
-  ) : null
+  const startItem = props.startIcon ? <Icon type={props.startIcon} size={props.size} /> : null
+  const endItem = props.endIcon ? <Icon type={props.endIcon} size={props.size} /> : null
 
   return <ButtonFactory {...props} startItem={startItem} endItem={endItem} />
 }

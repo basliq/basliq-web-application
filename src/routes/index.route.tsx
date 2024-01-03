@@ -1,6 +1,6 @@
-import {createBrowserRouter} from "react-router-dom";
-import {RoutePaths} from "./route-paths.ts";
-import {BoardPage} from "../pages/board/page.tsx";
+import { createBrowserRouter } from 'react-router-dom'
+import { RoutePaths } from './route-paths.ts'
+import { BoardPage } from '../pages/board/page.tsx'
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +12,6 @@ export const router = createBrowserRouter([
     element: <BoardPage />,
   },
   {
-    path: RoutePaths.auth
-  }
+    path: RoutePaths.auth,
+  },
 ])
