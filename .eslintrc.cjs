@@ -17,7 +17,8 @@ module.exports = {
     "import/resolver": {
       "alias": {
         "map": [
-          ["@", "./src"]
+          ["@", "./src"],
+          ["PUBLIC", "./public"]
         ]
       },
       "node": {

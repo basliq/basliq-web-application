@@ -1,6 +1,6 @@
-import { ButtonFactory, ButtonJustifyValues, ButtonSizes, ButtonStates, ButtonTypes } from './ButtonFactory.tsx'
-import Icon, { Icons } from '../../icons/Icon.tsx'
 import { RelativePositionCenter } from '@/types/relative-position.ts'
+import Icon, { Icons } from '../../icons/Icon.tsx'
+import { ButtonFactory, ButtonJustifyValues, ButtonSizes, ButtonStates, ButtonTypes } from './ButtonFactory.tsx'
 
 type Props = {
   size?: ButtonSizes

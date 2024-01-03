@@ -1,9 +1,9 @@
-import s from './button.module.css'
-import { RelativePositionCenter } from '@/types/relative-position.ts'
 import React from 'react'
+import { useAppSettings } from '@/storages/global-state/app-settings.ts'
+import { RelativePositionCenter } from '@/types/relative-position.ts'
 import { Dropdown } from '../dropdown/Dropdown.tsx'
 import { Spinner } from '../spinner/Spinner.tsx'
-import { useAppSettings } from '@/storages/global-state/app-settings.ts'
+import s from './button.module.css'
 
 // TODO - animations
 

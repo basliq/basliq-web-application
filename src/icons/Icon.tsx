@@ -1,5 +1,5 @@
-import s from './icon.module.css'
 import { IconMap } from './icon-map.tsx'
+import s from './icon.module.css'
 
 // This project uses icons from Material Design.
 //

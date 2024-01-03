@@ -1,5 +1,5 @@
-import s from './board.module.css'
 import { List } from '../list/List.tsx'
+import s from './board.module.css'
 
 export const Board = () => {
   return (

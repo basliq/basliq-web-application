@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { RoutePaths } from './route-paths.ts'
 import { BoardPage } from '../pages/board/page.tsx'
+import { RoutePaths } from './route-paths.ts'
 
 export const router = createBrowserRouter([
   {

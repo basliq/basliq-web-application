@@ -1,5 +1,5 @@
+import logoSVG from 'PUBLIC/vite.svg'
 import s from './logo.module.css'
-import logoSVG from '../../../public/vite.svg'
 
 type LogoProps = {
   withText?: boolean

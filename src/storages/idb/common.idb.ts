@@ -1,6 +1,6 @@
-import * as idb from 'idb'
 import { AppSettings } from '../global-state/app-settings.ts'
 import { IDBPaths } from './idb-paths.ts'
+import * as idb from 'idb'
 
 export const CommonIDB = {
   openDB: async () => {
